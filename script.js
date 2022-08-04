@@ -2,15 +2,25 @@ var $messages = $('.messages-content'),
     d, h, m,
     i = 0;
 
+var myPix = new Array("./images/df1.jpg","./images/df2.jpg","./images/df3.jpg","./images/df4.jpg","./images/df5.jpg","./images/df6.jpg");
+
+ var randomNum = Math.floor(Math.random() * myPix.length);
+
 $(window).load(function() {
 
   $messages.mCustomScrollbar();
+  choosePic();
 
 
   setTimeout(function() {
     //fakeMessage();
   }, 100);
 });
+
+function choosePic() {
+    
+     document.getElementById("myPicture").src = myPix[randomNum];
+}
 
 
 
@@ -82,73 +92,73 @@ let product;
 if (compare(prompts, replies, text)) { 
     // Search for exact match in `prompts`
     product = compare(prompts, replies, text);
-    $('<div class="message loading new"><figure class="avatar"><img src="./images/face1.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+    $('<div class="message loading new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+      
 
   updateScrollbar();
     setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="./images/face1.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
   }, 1000 + (Math.random() * 20) * 100);
   } else if (text.match(/thank/gi)) {
     product = "Wala 'yon!"
-    $('<div class="message loading new"><figure class="avatar"><img src="./images/face1.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
-  updateScrollbar();
+$('<div class="message loading new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));  updateScrollbar();
     setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="./images/face1.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
+     $('<div class="message new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
   }, 1000 + (Math.random() * 20) * 100);
 
   }else if (text.match(/language/gi)) {
     product = "Swardspeak"
-    $('<div class="message loading new"><figure class="avatar"><img src="./images/face1.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+$('<div class="message loading new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));  updateScrollbar();
   updateScrollbar();
     setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="./images/face1.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
   }, 1000 + (Math.random() * 20) * 100);
   } else if (text.match(/swardspeak/gi)) {
     product = "salitang beki - gay lingo na Pilipinas" 
-    $('<div class="message loading new"><figure class="avatar"><img src="./images/face1.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+$('<div class="message loading new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));  updateScrollbar();
   updateScrollbar();
     setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="./images/face1.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
   }, 1000 + (Math.random() * 20) * 100);
   } else if (text.match(/salitang beki/gi)) {
     product = "swardspeak" 
-    $('<div class="message loading new"><figure class="avatar"><img src="./images/face1.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+$('<div class="message loading new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));  updateScrollbar();
   updateScrollbar();
     setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="./images/face1.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
   }, 1000 + (Math.random() * 20) * 100);
   } else if (text.match(/politic/gi)) {
     product = "Nalurkey akey sa shpluk ni Pacquiao sa mga gays!" 
-    $('<div class="message loading new"><figure class="avatar"><img src="./images/face1.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+$('<div class="message loading new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));  updateScrollbar();
   updateScrollbar();
     setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="./images/face1.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
   }, 1000 + (Math.random() * 20) * 100);
   }else if (text.match(/fine/gi)) {
     product = "Gurl, mas ganju akesh sa 'yo. Chos!" 
-    $('<div class="message loading new"><figure class="avatar"><img src="./images/face1.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+$('<div class="message loading new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));  updateScrollbar();
   updateScrollbar();
     setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="./images/face1.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
   }, 1000 + (Math.random() * 20) * 100);
@@ -201,12 +211,13 @@ function fakeMessage() {
   if ($('.message-input').val() != '') {
     return false;
   }
-  $('<div class="message loading new"><figure class="avatar"><img src="./images/bot2.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+$('<div class="message loading new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));  updateScrollbar();
+
   updateScrollbar();
 
   setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="./images/bot2.png" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure>' + product + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
     i++;
@@ -221,7 +232,7 @@ function cloudMessage() {
   if ($('.message-input').val() != '') {
     return false;
   }
-  $('<div class="message loading new"><figure class="avatar"><img src="./images/face1.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+$('<div class="message loading new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));  updateScrollbar();
   updateScrollbar();
 
   setTimeout(function() {
@@ -239,7 +250,7 @@ function randomNumber(max) {
     a = randomNumber((data.texts).length);
     //console.log((data.texts).length);
     //console.log(data.texts[a]);
-    $('<div class="message new"><figure class="avatar"><img src="./images/face1.jpg" /></figure>' + data.texts[a] + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src=" ' + './images/df'+ (randomNum+1) +'.jpg" /></figure>' + data.texts[a] + '</div>').appendTo($('.mCSB_container')).addClass('new');
 
 
 
